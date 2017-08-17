@@ -30,10 +30,13 @@ int main(void)
     pList -> ListTraverse();
     
     cout << "-------------------------\n";
-    
+//    获取节点
+    pList -> GetElem(0, &temp);
+    temp.printNode();
+    cout << "-------------------------\n";
+//    删除节点
     pList -> ListDelete(2, &temp);
     pList -> ListTraverse();
-    temp.printNode();
     delete pList;
     return 0;
 }

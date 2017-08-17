@@ -120,7 +120,18 @@ void List::ListTraverse()
     }
 }
 
-
+bool List::GetElem(int i, Node *pNode)
+{
+    if (i < 0 || i > m_iLength) {
+        return false;
+    }
+    Node *currentNode = m_pList;
+    for (int k = 0; k <= i; k++) {
+        currentNode = currentNode -> next;
+    }
+    pNode -> data = currentNode -> data;
+    return true;
+}
 
 
 

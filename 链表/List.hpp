@@ -26,11 +26,14 @@ public:
     bool ListInsert(int i, Node *pNode);
 //    删除节点
     bool ListDelete(int i, Node *pNode);
-    
 //    遍历链表
     void ListTraverse();
+//    获取节点
+    bool GetElem(int i, Node *pNode);
 private:
+//    链表头结点
     Node *m_pList;
+//    链表长度
     int m_iLength;
 };
 
