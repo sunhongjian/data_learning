@@ -33,7 +33,10 @@ int main(void)
 //    获取节点
     pList -> GetElem(0, &temp);
     temp.printNode();
-    cout << "-------------------------\n";
+    cout << "---------查找data=3的节点---------------\n";
+    int idx = pList -> LocateElem(&node1);
+    cout << idx << "\n";
+    cout << "---------删除第二个节点----------------\n";
 //    删除节点
     pList -> ListDelete(2, &temp);
     pList -> ListTraverse();

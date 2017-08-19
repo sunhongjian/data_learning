@@ -30,6 +30,8 @@ public:
     void ListTraverse();
 //    获取节点
     bool GetElem(int i, Node *pNode);
+//    查找节点是否存在,如果存在返回节点位序
+    int LocateElem(Node *pNode);
 private:
 //    链表头结点
     Node *m_pList;

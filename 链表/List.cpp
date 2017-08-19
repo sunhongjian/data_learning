@@ -133,6 +133,22 @@ bool List::GetElem(int i, Node *pNode)
     return true;
 }
 
+int List::LocateElem(Node *pNode)
+{
+    Node *currentNode = m_pList;
+    int k = 0;
+    while (currentNode -> next != NULL) {
+        currentNode = currentNode -> next;
+        if(currentNode -> data == pNode -> data)
+        {
+            return 0;
+        }
+        k++;
+    }
+    return -1;
+    
+}
+
 
 
 
