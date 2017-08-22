@@ -149,6 +149,41 @@ int List::LocateElem(Node *pNode)
     
 }
 
+bool List::PirorElem(Node *pCurrentNode, Node *pPreNode)
+{
+    Node *currentNode = m_pList;
+    Node *tempNode = NULL;
+    while (currentNode -> next != NULL) {
+        tempNode = currentNode;
+        currentNode = currentNode -> next;
+        if(currentNode -> data == pCurrentNode -> data)
+        {
+            if(tempNode == m_pList)
+            {
+                return false;
+            }
+            pPreNode -> data = tempNode -> data;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool List::NextElem(Node *pCurrentNode, Node *pNextNode)
+{
+    Node *currentNode = m_pList;
+    while (currentNode -> next != NULL) {
+        if (currentNode -> data == pCurrentNode -> data) {
+            currentNode = currentNode -> next;
+            pNextNode -> data = currentNode -> data;
+            return true;
+        }
+        currentNode = currentNode -> next;
+    }
+    return false;
+}
+
+
 
 
 

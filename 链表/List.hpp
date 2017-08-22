@@ -32,6 +32,10 @@ public:
     bool GetElem(int i, Node *pNode);
 //    查找节点是否存在,如果存在返回节点位序
     int LocateElem(Node *pNode);
+//    取前驱节点
+    bool PirorElem(Node *pCurrentNode, Node *pPreNode);
+//    取后继节点
+    bool NextElem(Node *pCurrentNode, Node *pNextNode);
 private:
 //    链表头结点
     Node *m_pList;

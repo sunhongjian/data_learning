@@ -14,19 +14,19 @@ using namespace std;
 int main(void)
 {
     Node node1;
-    node1.data = 3;
+    node1.data = 1;
     Node node2;
-    node2.data = 4;
+    node2.data = 2;
     Node node3;
-    node3.data = 5;
+    node3.data = 3;
     Node node4;
-    node4.data = 6;
+    node4.data = 4;
     Node temp;
     List *pList = new List();
-    pList -> ListInsertHead(&node1);
-    pList -> ListInsertHead(&node2);
-    pList -> ListInsertHead(&node3);
-    pList -> ListInsertHead(&node4);
+    pList -> ListInsertTail(&node1);
+    pList -> ListInsertTail(&node2);
+    pList -> ListInsertTail(&node3);
+    pList -> ListInsertTail(&node4);
     pList -> ListTraverse();
     
     cout << "-------------------------\n";
@@ -36,6 +36,15 @@ int main(void)
     cout << "---------查找data=3的节点---------------\n";
     int idx = pList -> LocateElem(&node1);
     cout << idx << "\n";
+    
+    cout << "---------查找node3的前驱节点----------------\n";
+    Node preTemp;
+    pList -> PirorElem(&node3, &preTemp);
+    preTemp.printNode();
+    cout << "---------查找node3的后继节点----------------\n";
+    Node nextTemp;
+    pList -> NextElem(&node3, &nextTemp);
+    nextTemp.printNode();
     cout << "---------删除第二个节点----------------\n";
 //    删除节点
     pList -> ListDelete(2, &temp);
